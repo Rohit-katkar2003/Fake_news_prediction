@@ -6,10 +6,10 @@ import re
 import string
 
 # Load the trained model
-loaded_model = pickle.load(open("C:/Users/rohit/Data science/Major Project/.ipynb_checkpoints/Fake News Prediction/news.sav", 'rb'))
+loaded_model = pickle.load(open("news.sav", 'rb'))
 
 # Load the fitted vectorizer
-vectorizer = pickle.load(open("C:/Users/rohit/Data science/Major Project/.ipynb_checkpoints/Fake News Prediction/vectorizer.sav", 'rb'))
+vectorizer = pickle.load(open("vectorizer.sav", 'rb'))
 
 def output_label(n):
     if n == 0:
@@ -47,4 +47,4 @@ if st.button('Predict'):
             st.error(f'Prediction: {prediction}')
         else:
             st.success(f'Prediction: {prediction}')
-        
+
